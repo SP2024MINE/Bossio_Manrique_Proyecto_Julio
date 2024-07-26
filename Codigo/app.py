@@ -5,7 +5,7 @@ from sodapy import Socrata
 st.title("Consulta de Datos de Contratación")
 
 # Configuración de la API Socrata
-client = Socrata("www.datos.gov", None)
+client = Socrata("www.datos.gov.co", None)
 
 # Solicitud de datos
 @st.cache
