@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "bossio-manrique-proyecto-julio"
+version = "0.1.0"
+description = "Trabajo 1 julio 2024"
+authors = ["Camilo Manrique y Armando Bossio"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "^1.37.0"
+pandas = "^2.2.2"
+requests = "^2.32.3"
+sodapy = "^2.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
