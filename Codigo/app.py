@@ -10,10 +10,14 @@ client = Socrata("www.datos.gov.co", None)
 # Solicitud de datos
 @st.cache
 def load_data():
-    results = client.get("jbjy-vk9h", limit=1000)  # Reemplazar 'xxxx' con el endpoint específico
-    return pd.DataFrame.from_records(results)
+    consulta = """select * 
+    where nombre_entidad = 'SUPERINTENDENCIA FINANCIERA DE COLOMBIA'"""
+    results = client.get("jbjy-vk9h", query=consulta)
+    results_df = pd.DataFrame.from_records(results)
+    return results_df
 
 df = load_data()
 
 # Mostrar datos
 st.write(df)
+
